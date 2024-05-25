@@ -1,0 +1,36 @@
+<h2>New snow load</h2>
+
+<form [formGroup]="snowLoadForm" class="company-form"  (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="standard" class="control-form">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="standard" class="control-form">
+    <mat-label>Roof type</mat-label>
+    <mat-select formControlName="roofType">
+      <mat-option [value]="RoofTypeEnum.Monopitch">Monopitch</mat-option>
+      <mat-option [value]="RoofTypeEnum.Pitched" >Pitched</mat-option>
+      <mat-option [value]="RoofTypeEnum.MultiSpan">Multi span</mat-option>
+      <mat-option [value]="RoofTypeEnum.Cylindrical">Cylindrical</mat-option>
+      <mat-option [value]="RoofTypeEnum.RoofAbuttingToTallerConstruction">Roof abutting to taller construction</mat-option>
+      <mat-option [value]="RoofTypeEnum.Snowguards">Snowguards</mat-option>
+      <mat-option [value]="RoofTypeEnum.SnowOverhanging">Snow overhanging</mat-option>
+      <mat-option [value]="RoofTypeEnum.DriftingAtProjectionsObstructions">Drifting at projections obstructions</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div [ngSwitch]="snowLoadForm.value.roofType">
+    <div *ngSwitchCase="RoofTypeEnum.Monopitch"><img class="images" src="/assets/images/snow-loads/Monopitch.png"></div>
+    <div *ngSwitchCase="RoofTypeEnum.Pitched"><img class="images" src="/assets/images/snow-loads/PitchedRoof.png"></div>
+    <div *ngSwitchCase="RoofTypeEnum.MultiSpan"><img class="images" src="/assets/images/snow-loads/MultispanRoof.png"></div>
+    <div *ngSwitchCase="RoofTypeEnum.Cylindrical"><img class="images" src="/assets/images/snow-loads/CylindricalRoof.png"></div>
+    <div *ngSwitchCase="RoofTypeEnum.RoofAbuttingToTallerConstruction"><img class="images" src="/assets/images/snow-loads/RoofAbuttingToTallerConstruction_1.png"></div>
+    <div *ngSwitchCase="RoofTypeEnum.Snowguards"><img class="images" src="/assets/images/snow-loads/Snowguards.png"></div>
+    <div *ngSwitchCase="RoofTypeEnum.SnowOverhanging"><img class="images" src="/assets/images/snow-loads/SnowOverhanging.png"></div>
+    <div *ngSwitchCase="RoofTypeEnum.DriftingAtProjectionsObstructions"><img class="images" src="/assets/images/snow-loads/DriftingAtProjectionsObstructions.png"></div>
+    <div *ngSwitchDefault></div>
+  </div>
+
+  <button  mat-raised-button color="accent" type="submit" [disabled]="!snowLoadForm.valid">Create</button>
+</form>

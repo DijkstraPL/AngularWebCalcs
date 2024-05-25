@@ -1,0 +1,47 @@
+
+<div class="flex-wrap flex flex-row d-flex">
+  <div *ngIf="categories$ | async" class="flex margin-right-4">
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select [(value)]="selectedCategory" matTooltip="{{ selectedCategory?.name ?? 'Category' }}">
+        <mat-option></mat-option>
+        <mat-option *ngFor="let category of categories$ | async" [value]="category" [matTooltip]="category.name ?? ''"
+          matTooltipPosition="right">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="(subcategories$ | async) && selectedCategory" class="flex margin-right-4">
+    <mat-form-field appearance="fill">
+      <mat-label>Subcategory</mat-label>
+      <mat-select [(value)]="selectedSubcategory" matTooltip="{{ selectedSubcategory?.name ?? 'Subcategory' }}">
+        <mat-option></mat-option>
+        <mat-option *ngFor="let subcategory of subcategories$ | async" [value]="subcategory"
+          [matTooltip]="subcategory.name ?? ''" matTooltipPosition="right">
+          {{ subcategory.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="(materials$ | async) && selectedSubcategory" class="flex margin-right-4">
+    <mat-form-field appearance="fill">
+      <mat-label>Material</mat-label>
+      <mat-select [(value)]="selectedMaterial" matTooltip="{{ selectedMaterial?.name ?? 'Material' }}">
+        <mat-option></mat-option>
+        <mat-option *ngFor="let material of materials$ | async" [value]="material" [matTooltip]="material.name ?? ''"
+          matTooltipPosition="right">
+          {{ material.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="flex" *ngIf="selectedMaterial">
+    <button mat-fab color="primary" (click)="addMaterial(selectedMaterial)">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

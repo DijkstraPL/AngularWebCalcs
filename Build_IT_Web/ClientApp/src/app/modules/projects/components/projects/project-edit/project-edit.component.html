@@ -1,0 +1,15 @@
+<h2>Edit project</h2>
+
+<form [formGroup]="projectForm" class="project-form"  (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="standard" class="control-form">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="standard" class="control-form">
+    <mat-label>Description</mat-label>
+    <textarea  matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <button  mat-raised-button color="accent" type="submit" [disabled]="!projectForm.valid">Edit</button>
+</form>

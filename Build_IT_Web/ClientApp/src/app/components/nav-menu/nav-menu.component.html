@@ -1,0 +1,65 @@
+<mat-toolbar color="disabled" class="navbar-small">
+  <!-- Left side of nav menu - addresses -->
+  <span>
+    <button mat-button coolor="basic" [routerLink]="['/']">Build IT</button>
+  </span>
+  <span *ngIf="!!companyId">
+    /
+  </span>
+  <span *ngIf="!!companyId">
+    <button mat-button coolor="basic" [routerLink]="[companyId]" matTooltip="Company">{{companyName}}</button>
+  </span>
+  <span *ngIf="!!projectId">
+    /
+  </span>
+  <span *ngIf="!!projectId">
+    <button mat-button coolor="basic" [routerLink]="companyId + '/' + projectId" matTooltip="Project">{{projectName}}</button>
+  </span>
+  <span *ngIf="!!deadLoadId">
+    /
+  </span>
+  <span *ngIf="!!deadLoadId">
+    <button mat-button coolor="basic" [routerLink]="companyId + '/' + projectId + '/' + deadLoadId"  matTooltip="Dead load">{{deadLoadName}}</button>
+  </span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <span class="content-centered">
+    <!-- Theme selector -->
+    <app-theme-menu class="content-centered clickable"
+    [themeOptions]="themeOptions$ | async"
+    (themeChange)="themeChangeHandler($event)">
+  </app-theme-menu>
+  </span>
+  <span >
+
+  <app-login-menu></app-login-menu>
+
+</span>
+
+  <span class="ms-3">
+    <!-- Main menu -->
+    <button color="link"
+    class="selectable-icon"
+      matTooltip="Menu"
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+
+      <button mat-menu-item [routerLink]="['/' + companyId]" [routerLinkActive]="['link-active']">
+        <mat-icon>receipt_long</mat-icon>
+        <span>Projects</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/dead-loads']" [routerLinkActive]="['link-active']">
+        <mat-icon>arrow_downward</mat-icon>
+        <span>Dead loads</span>
+      </button>
+    </mat-menu>
+  </span>
+
+</mat-toolbar>
+

@@ -1,0 +1,24 @@
+@import "~src/variables.scss";
+
+.example-card {
+  margin: 20px;
+}
+
+.right{
+  float: right;
+}
+
+.list-project{
+ background-color: $accent;
+}
+@media (max-width: 990px) {
+  #project-card2 { display: none; }
+}
+
+@media (max-width: 769px) {
+  #project-card1 { display: none; }
+}
+
+@media (max-width: 479px) {
+  #project-card0 { display: none; }
+}

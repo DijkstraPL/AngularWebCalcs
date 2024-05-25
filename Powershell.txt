@@ -1,0 +1,3 @@
+foreach($package in @("animations","common","compiler","core","forms","http","platform-browser","platform-browser-dynamic","router")) {
+    npm install @angular/$package@latest -E
+}

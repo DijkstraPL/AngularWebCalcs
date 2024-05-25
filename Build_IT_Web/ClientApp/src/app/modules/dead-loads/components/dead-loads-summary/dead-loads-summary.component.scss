@@ -1,0 +1,46 @@
+@import "~src/variables.scss";
+
+table{
+  width: 100%;
+}
+
+.input-form-field{
+  width: 7em;
+}
+
+h5{
+    font-size: x-small;
+    margin:0;
+}
+
+h6 {
+  font-size: x-small;
+  margin: 0;
+}
+
+tr.additions-row {
+  height: 0;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+}
+
+.additions {
+  overflow: hidden;
+  display: flex;
+}
+
+.no-bullets{
+  list-style-type: none;
+}
+
+.collapsed{
+  display: none;
+}
+
+.summary{
+  color: $accent;
+  font-weight: bold;
+  font-size: large;
+}

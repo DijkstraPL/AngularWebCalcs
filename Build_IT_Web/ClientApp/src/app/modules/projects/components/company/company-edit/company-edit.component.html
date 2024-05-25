@@ -1,0 +1,10 @@
+<h2>Edit company</h2>
+
+<form [formGroup]="companyForm" class="company-form"  (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="standard" class="control-form">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name"/>
+  </mat-form-field>
+
+  <button  mat-raised-button color="accent" type="submit" [disabled]="!companyForm.valid">Edit</button>
+</form>

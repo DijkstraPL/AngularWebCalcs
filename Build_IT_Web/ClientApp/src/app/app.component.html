@@ -1,0 +1,71 @@
+<div class="full-height">
+  <app-nav-menu></app-nav-menu>
+  <build-it-progress-bar></build-it-progress-bar>
+
+  <div>
+
+    <mat-drawer-container class="example-container" autosize>
+      <!-- TODO: change it to dynamic groupped by category list -->
+      <mat-drawer mode="side" opened class="example-sidenav">
+        <div (click)="drawerToggle('companies')" [class.selected-side-nav]="selectedSection=='companies'"
+        *ngIf="isAuthenticated$ | async">
+          <mat-icon class="clickable hover" matTooltip="Companies">factory</mat-icon>
+        </div>
+        <div *ngIf="_activeNavigationService.selectedCompanyId">
+          <div (click)="drawerToggle('projects')" [class.selected-side-nav]="selectedSection=='projects'">
+            <mat-icon class="clickable hover" matTooltip="Projects">garage_home</mat-icon>
+          </div>
+          <div (click)="drawerToggle('users')" [class.selected-side-nav]="selectedSection=='users'">
+            <mat-icon class="clickable hover" matTooltip="Users">supervisor_account</mat-icon>
+          </div>
+          <hr />
+          <div *ngIf="_activeNavigationService.selectedProjectId">
+            <div (click)="drawerToggle('dead-loads')" [class.selected-side-nav]="selectedSection=='dead-loads'">
+              <mat-icon class="clickable hover" matTooltip="Dead loads">download</mat-icon>
+            </div>
+            <div (click)="drawerToggle('snow-loads')" [class.selected-side-nav]="selectedSection=='snow-loads'">
+              <mat-icon class="clickable hover" matTooltip="Snow loads">ac_unit</mat-icon>
+            </div>
+            <div (click)="drawerToggle('wind-loads')" [class.selected-side-nav]="selectedSection=='wind-loads'">
+              <mat-icon class="clickable hover" matTooltip="Wind loads">wind_power</mat-icon>
+            </div>
+            <hr />
+
+            <div (click)="drawerToggle('beam-calculator')"
+              [class.selected-side-nav]="selectedSection=='beam-calculator'">
+              <mat-icon class="clickable hover" matTooltip="Beams calculator">maximize</mat-icon>
+            </div>
+
+            <div (click)="drawerToggle('frame-calculator')"
+              [class.selected-side-nav]="selectedSection=='frame-calculator'">
+              <mat-icon class="clickable hover" matTooltip="Frame calculator">change_history</mat-icon>
+            </div>
+            <div (click)="drawerToggle('section-calculator')"
+              [class.selected-side-nav]="selectedSection=='section-calculator'">
+              <mat-icon class="clickable hover" matTooltip="Section calculator">aspect_ratio</mat-icon>
+            </div>
+          </div>
+        </div>
+
+        <div (click)="drawerToggle()" *ngIf="selectedSection"
+          class="clickable content-centered bottom-aligned padding-vertical-4" [class.rotated-180]="drawer.opened">
+          <mat-icon class="clickable hover">double_arrow</mat-icon>
+        </div>
+      </mat-drawer>
+
+      <mat-drawer-container class="example-container">
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+          <build-it-side-nav-menu></build-it-side-nav-menu>
+        </mat-drawer>
+
+        <div class="example-sidenav-content container mt-5">
+          <router-outlet></router-outlet>
+        </div>
+      </mat-drawer-container>
+
+
+    </mat-drawer-container>
+
+  </div>
+
+</div>

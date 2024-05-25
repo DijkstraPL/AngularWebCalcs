@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <LangVersion>latest</LangVersion>
+    <StartupObject>Build_IT_SoftwareArchitecture.Program</StartupObject>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Documents\Decisions\0001-SYS-record-architecture-decisions.md" />
+    <None Remove="Documents\Decisions\0002-SYS-migrate-to-core3.md" />
+    <None Remove="Documents\Decisions\0003-SYS-divide-desktop-app-to-modules.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Structurizr.Client" Version="1.0.0" />
+    <PackageReference Include="Structurizr.Core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Documents\Decisions\0003-SYS-divide-desktop-app-to-modules.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Decisions\0002-SYS-migrate-to-core3.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Decisions\0001-SYS-record-architecture-decisions.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

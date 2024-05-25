@@ -1,0 +1,120 @@
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import "~src/variables.scss";
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+html {
+  height: 100vh;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+}
+
+.full-height {
+  vertical-align: top;
+  height: calc(100vh - 2em);
+}
+
+/*
+.basic-container {
+  padding: 5px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+} */
+
+.selected-side-nav{
+  color: $accent;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable.hover:hover {
+  color: $accent;
+}
+
+
+@for $i from 0 through 24 {
+  $rotation: 15deg * $i;
+
+  .rotated-#{$i*15} {
+    transform: rotate($rotation);
+    transform-origin: 50% 50%;
+  }
+}
+
+.bottom-aligned {
+  position: absolute;
+  bottom: 0px;
+}
+
+.content-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+h4 {
+  font-size: medium;
+  color: $primary;
+}
+
+.example-container {
+
+  display: flex;
+  height: calc(100vh - 2.8em);
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav-content {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 5px 5px;
+}
+
+
+@for $i from 1 through 10 {
+  $spacing: 0.2em * $i;
+
+  .padding-vertical-#{$i*0.2*10} {
+    padding-bottom: $spacing;
+    padding-top: $spacing;
+  }
+
+  .margin-right-#{$i*0.2*10} {
+    margin-right: $spacing;
+  }
+  .margin-left-#{$i*0.2*10} {
+    margin-left: $spacing;
+  }
+  .padding-left-#{$i*0.2*10} {
+    padding-left: $spacing;
+  }
+}
+
+
+@for $i from 1 through 10 {
+  $spacing: 2em * $i;
+
+
+  .min-width-#{$i*2*10}{
+    min-width: $spacing;
+  }
+}

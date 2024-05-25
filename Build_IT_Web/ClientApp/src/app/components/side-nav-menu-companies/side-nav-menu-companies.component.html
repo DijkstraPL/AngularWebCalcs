@@ -1,0 +1,26 @@
+<h4 class="content-centered">Companies</h4>
+<mat-card *ngFor="let company of companies$ | async"
+          class="clickable" [class.selected]="company.id == selectedCompanyId"
+          (click)="companyClicked(company.id)"
+          [matMenuTriggerFor]="companyMenu" appRightMouseMenu [matMenuTriggerData]="company"
+          [menu]="companyMenu"
+          [menuData]="company"
+          >{{company.name}}
+</mat-card>
+
+<div class="content-centered fixed-bottom bottom-aligned   padding-vertical-4">
+  <button mat-stroked-button color="accent" class="ml-0" (click)="addNewCompany()" >
+    <mat-icon class="clickable hover">add</mat-icon> New
+  </button>
+</div>
+
+<mat-menu #companyMenu="matMenu">
+  <button mat-menu-item (click)="onEditCompany(companyMenu)">
+    <mat-icon>edit</mat-icon>
+    <span>Edit</span>
+  </button>
+  <button mat-menu-item (click)="onRemoveCompany(companyMenu)">
+    <mat-icon>remove</mat-icon>
+    <span>Remove</span>
+  </button>
+</mat-menu>

@@ -1,0 +1,12 @@
+<h4 class="content-centered">Snow loads</h4>
+
+<mat-card *ngFor="let snowLoad of snowLoads$ | async" class="clickable"
+  [class.selected]="snowLoad.id == selectedSnowLoadId" (click)="snowLoadClicked(snowLoad.id ?? 0)">
+  {{snowLoad.name}}
+</mat-card>
+
+<div class="content-centered fixed-bottom bottom-aligned   padding-vertical-4">
+  <button mat-stroked-button color="accent" class="ml-0" (click)="addNewSnowLoad()">
+    <mat-icon class="clickable hover">add</mat-icon> New
+  </button>
+</div>

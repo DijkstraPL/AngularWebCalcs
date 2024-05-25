@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Remove project </h1>
+<div mat-dialog-content>
+  <p>Put the name of the project to remove</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Project name</mat-label>
+    <input matInput [(ngModel)]="projectName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No</button>
+  <button mat-button [disabled]="projectName !== data.projectName" [mat-dialog-close]="projectName" cdkFocusInitial>Confirm</button>
+</div>

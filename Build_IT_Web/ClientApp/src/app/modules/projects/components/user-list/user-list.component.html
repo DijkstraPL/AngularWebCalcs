@@ -1,0 +1,26 @@
+<mat-expansion-panel *ngFor="let user of users$ | async">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{user.name}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <table mat-table [dataSource]="getData(user.id)" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+              <ng-container matColumnDef="Project Name">
+                <th mat-header-cell *matHeaderCellDef> Project name </th>
+                <td mat-cell *matCellDef="let element"> {{element.projectName}} </td>
+              </ng-container>
+
+    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+      <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-checkbox  [(ngModel)]="element[column]"></mat-checkbox>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="visibleColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: visibleColumns;"></tr>
+  </table>
+</mat-expansion-panel>

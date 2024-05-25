@@ -1,0 +1,9 @@
+<h2>Dead Loads</h2>
+<mat-divider></mat-divider>
+
+<h3>Select data</h3>
+<app-dead-loads-selection></app-dead-loads-selection>
+
+<h3 *ngIf="showSummary">Summary</h3>
+<app-dead-loads-summary (_layeredMaterialsChanged)="onLayeredMaterialsChanged($event)"></app-dead-loads-summary>
+

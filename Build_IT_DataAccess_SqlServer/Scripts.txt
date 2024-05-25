@@ -1,0 +1,5 @@
+﻿add-migration Init -Context DeadLoadsDbContext -OutputDir .\DeadLoads\Migrations
+add-migration Init -Context ProjectsDbContext -OutputDir .\Projects\Migrations
+add-migration Init -Context ScriptInterpreterDbContext -OutputDir .\ScriptInterpreter\Migrations
+add-migration Init -Context SteelProfilesDbContext -OutputDir .\SteelProfiles\Migrations
+add-migration Init -Context ApplicationDbContext -OutputDir .\Application\Migrations

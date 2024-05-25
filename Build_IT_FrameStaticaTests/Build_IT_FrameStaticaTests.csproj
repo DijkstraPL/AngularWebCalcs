@@ -1,0 +1,128 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FrameData\2019.09.30-03_0-4.csv" />
+    <None Remove="FrameData\2019.09.30-03_1-5.csv" />
+    <None Remove="FrameData\2019.09.30-04_0-1.csv" />
+    <None Remove="FrameData\2019.09.30-04_1-6.csv" />
+    <None Remove="FrameData\2019.09.30-05_0-8.csv" />
+    <None Remove="FrameData\2019.09.30-05_1-9.csv" />
+    <None Remove="FrameData\2019.09.30-05_2-10.csv" />
+    <None Remove="FrameData\2019.09.30-06_0-14.csv" />
+    <None Remove="FrameData\2019.09.30-06_1-15.csv" />
+    <None Remove="FrameData\2019.09.30-06_2-28.csv" />
+    <None Remove="FrameData\2019.09.30-06_3-17.csv" />
+    <None Remove="FrameData\2019.09.30-06_4-18.csv" />
+    <None Remove="FrameData\2019.09.30-06_5-29.csv" />
+    <None Remove="FrameData\2019.09.30-07_0-19.csv" />
+    <None Remove="FrameData\2019.09.30-07_1-20.csv" />
+    <None Remove="FrameData\2019.09.30-07_2-21.csv" />
+    <None Remove="FrameData\2019.10.01-01_0-23.csv" />
+    <None Remove="FrameData\2019.10.01-01_1-22.csv" />
+    <None Remove="FrameData\2019.10.01-01_2-24.csv" />
+    <None Remove="FrameData\2019.10.02-01_0-25.csv" />
+    <None Remove="FrameData\2019.10.02-01_1-27.csv" />
+    <None Remove="FrameData\2019.10.02-01_2-26.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="FrameData\2019.09.30-04_0-1.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-04_1-6.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-03_0-4.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-03_1-5.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-05_0-8.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-05_1-9.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-05_2-10.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-06_1-15.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-06_2-28.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-06_3-17.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-06_4-18.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-06_5-29.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-07_0-19.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-07_1-20.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.09.30-07_2-21.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.10.01-01_0-23.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.10.01-01_1-22.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.10.01-01_2-24.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.10.02-01_1-27.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FrameData\2019.10.02-01_2-26.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
+    <PackageReference Include="Moq" Version="4.18.1" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Build_IT_FrameStatica\Build_IT_FrameStatica.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="FrameData\2019.09.30-06_0-14.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="FrameData\2019.10.02-01_0-25.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

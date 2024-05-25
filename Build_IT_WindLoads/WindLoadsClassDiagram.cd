@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Build_IT_WindLoads.WindLoadData" Collapsed="true">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAABAACIACAAAIAAAACAAAIAwQgAABAEAAAAAkAQA=</HashCode>
+      <FileName>WindLoadData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.ExternalPressureWindForce" Collapsed="true">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAgAAAAAAABAAAAAgQAAQABA=</HashCode>
+      <FileName>WindLoadsCases\ExternalPressureWindForce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.WallsWindLoads" Collapsed="true">
+    <Position X="1.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIAEAAAAAAAAAAAAAAAAABIAAEgAAAAAAAAABAABI=</HashCode>
+      <FileName>WindLoadsCases\WallsWindLoads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.WindLoadCase" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAQAAAAAAAAAAAAABAAAAQBAAAAIABABgQBA=</HashCode>
+      <FileName>WindLoadsCases\WindLoadCase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.DuopitchRoofWindLoads" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQEAYgABAoAQYACAlAAgDAGFAQgMCEAAAFRIECRIKlA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\DuopitchRoofWindLoads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.DuopitchRoofWindLoadsRotation0" Collapsed="true">
+    <Position X="3.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQEAYgABAoAAYACAhAAgCAGEAQgMAAAAABRAEAQIKlA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\DuopitchRoofWindLoadsRotation0.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.DuopitchRoofWindLoadsRotation90" Collapsed="true">
+    <Position X="5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQEAYgABAoAAYACAhAAgCAGEAQgMAAAAABRAEAQIKlA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\DuopitchRoofWindLoadsRotation90.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.FlatRoofWindLoads" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAEAAAAAAQBAAAAQAAAAAAAAABAABA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\FlatRoofWindLoads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.FlatRoofWithCurvedEavesWindLoads" Collapsed="true">
+    <Position X="12.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAgAAAAQAABEEAABRAAAIIAACAAAAAAIAABAEBA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\FlatRoofWithCurvedEavesWindLoads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.FlatRoofWithMansardEavesWindLoads" Collapsed="true">
+    <Position X="14.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAoAAAJAABIQAAAAEAAAVAAAAAAACAAAAkApAARAABA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\FlatRoofWithMansardEavesWindLoads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.FlatRoofWithParapetesWindLoads" Collapsed="true">
+    <Position X="16.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAgAAAAQAABEEAABVAAAYIAQCAAAAAAIAADAABA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\FlatRoofWithParapetesWindLoads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.HippedRoofWindLoads" Collapsed="true">
+    <Position X="17.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAIIAA4AQAAAAEEIARAQBQgBADAAABAAYACBAABM=</HashCode>
+      <FileName>WindLoadsCases\Roofs\HippedRoofWindLoads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.MonopitchedRoofWindLoads" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQEAQgABAAAQQACAlAAADACFAQgICEAAAEBIECBIKlA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\MonopitchedRoofWindLoads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.MonopitchedRoofWindLoadsRotation0" Collapsed="true">
+    <Position X="7" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQEAQgABAAAAQACAhAAACACEAQgIAAAAAABAEAAIKlA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\MonopitchedRoofWindLoadsRotation0.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.MonopitchedRoofWindLoadsRotation180" Collapsed="true">
+    <Position X="8.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQEAQgABAAAAQACAhAAACACEAQgIAAAAAABAEAAIKlA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\MonopitchedRoofWindLoadsRotation180.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.WindLoadsCases.Roofs.MonopitchedRoofWindLoadsRotation90" Collapsed="true">
+    <Position X="10.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQEAQgABAAAAQACAhAAACACEAQgIAAAAAABAEAAIKlA=</HashCode>
+      <FileName>WindLoadsCases\Roofs\MonopitchedRoofWindLoadsRotation90.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.Terrains.Terrain" Collapsed="true">
+    <Position X="5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAKAAAAEAAABAEIAhAAAACQAAAA=</HashCode>
+      <FileName>Terrains\Terrain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Terrains.TerrainCategory0" Collapsed="true">
+    <Position X="3.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Terrains\TerrainCategory0.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.Terrains.TerrainCategoryI" Collapsed="true">
+    <Position X="6.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Terrains\TerrainCategoryI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.Terrains.TerrainCategoryII" Collapsed="true">
+    <Position X="1.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Terrains\TerrainCategoryII.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.Terrains.TerrainCategoryIII" Collapsed="true">
+    <Position X="5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Terrains\TerrainCategoryIII.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.Terrains.TerrainCategoryIV" Collapsed="true">
+    <Position X="8.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Terrains\TerrainCategoryIV.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.TerrainOrographies.CliffEscarpmentOrography" Collapsed="true">
+    <Position X="11.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAABAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>TerrainOrographies\CliffEscarpmentOrography.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.TerrainOrographies.HillRidgeOrography" Collapsed="true">
+    <Position X="13" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TerrainOrographies\HillRidgeOrography.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.TerrainOrographies.NoTerrainOrography" Collapsed="true">
+    <Position X="14.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TerrainOrographies\NoTerrainorography.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.TerrainOrographies.TerrainOrography" Collapsed="true">
+    <Position X="12" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQJBAAgAAAAAIkAAAABAAABACAAAAAAAAAAAAABEAA=</HashCode>
+      <FileName>TerrainOrographies\TerrainOrography.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Factors.DirectionalFactor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAACAAAAAAEAAAgAAAAAQAAAAQAAAAAQAA=</HashCode>
+      <FileName>Factors\DirectionalFactor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Factors.DynamicFactor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgAAAAABIAAAAAAAAAAAAAAAABAAAAQAAAAAAAA=</HashCode>
+      <FileName>Factors\DynamicFactor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Factors.HeightDisplacement" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgIABAAAAAAAAAAQAAAAgAAA=</HashCode>
+      <FileName>Factors\HeightDisplacement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Factors.NoStructuralFactorCalculator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factors\NoStructuralFactorCalculator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Factors.ReferenceHeightDueToNeighbouringStructures" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAIAAAAAAAEAAAAAAAAAQAAAAEAAAgAAAAAAACAAAA=</HashCode>
+      <FileName>Factors\ReferenceHeightDueToNeighbouringStructures.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Factors.SizeFactor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAABAAAAAAAAAAAAAAAAABAAAAQAAAAAAAA=</HashCode>
+      <FileName>Factors\SizeFactor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Factors.StructuralFactor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUIAAAAAAA=</HashCode>
+      <FileName>Factors\StructuralFactor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.Factors.StructuralFactorCalculator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABIgBIAAAABAAAAAAAAAAAAAAAAABAABAAAAAAgAIA=</HashCode>
+      <FileName>Factors\StructuralFactorCalculator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.AerodynamicAdmittanceHeight" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJAAAABAAAAAAAAACAAAAAAAAAAAAQAAAAgAAA=</HashCode>
+      <FileName>DynamicCharacteristics\AerodynamicAdmittanceHeight.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.AerodynamicAdmittanceWidth" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJAAAABAAAAAAAAACAAAAAAAAAAAAQAAAAgAAA=</HashCode>
+      <FileName>DynamicCharacteristics\AerodynamicAdmittanceWidth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.BackgroundFactor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAQAAAAgAAA=</HashCode>
+      <FileName>DynamicCharacteristics\BackgroundFactor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.FundamentalFlexuralFrequencyForHeightAbove50" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAgAAA=</HashCode>
+      <FileName>DynamicCharacteristics\FundamentalFlexuralFrequencyForHeightAbove50.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.LogarithmicDecrementOfDamping" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAgAAAAAAAAAAAAAQIAAAAAAA=</HashCode>
+      <FileName>DynamicCharacteristics\LogarithmicDecrementOfDamping.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.LogarithmicDecrementOfStructuralDamping" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>DynamicCharacteristics\LogarithmicDecrementOfStructuralDamping.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.NonDimensionalFrequency" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAIAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAIA=</HashCode>
+      <FileName>DynamicCharacteristics\NonDimensionalFrequency.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.NonDimensionalPowerSpectralDensity" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>DynamicCharacteristics\NonDimensionalPowerSpectralDensity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.PeakFactor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAAQAAAAAAAA=</HashCode>
+      <FileName>DynamicCharacteristics\PeakFactor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.ReferenceHeight" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAgAAA=</HashCode>
+      <FileName>DynamicCharacteristics\ReferenceHeight.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.ResonanceResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAgAAAAAABAAAAAAAAAAAAAAAAAgAABAQAAAAAAAA=</HashCode>
+      <FileName>DynamicCharacteristics\ResonanceResponse.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.TurbulentLengthScale" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAABAAAAAAAAIAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>DynamicCharacteristics\TurbulentLengthScale.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.DynamicCharacteristics.UpCrossingFrequency" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAIAAAAAAAAAAACAAAAAAAAAQAAAAAAIA=</HashCode>
+      <FileName>DynamicCharacteristics\UpCrossingFrequency.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.BuildingSite" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAAAAAEAIAAAgAABAAACAAAABAAQAEAAAAAAAAA=</HashCode>
+      <FileName>BuildingData\BuildingSite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.Structure" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEBAAACAgAAAAEAAAAAAAAA=</HashCode>
+      <FileName>BuildingData\Structure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.Wall" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAIAAQCAAAAAAAAABAAAiAAAAAAECAEAAEAJA=</HashCode>
+      <FileName>BuildingData\Wall.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.Walls.EqualHeightWalls" Collapsed="true">
+    <Position X="1.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAgAAAAAAIAAAAAAA=</HashCode>
+      <FileName>BuildingData\Walls\EqualHeightWalls.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.Roofs.DuopitchRoof" Collapsed="true">
+    <Position X="3.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAEAAAAACAAgAAAAEAAAAAEAAA=</HashCode>
+      <FileName>BuildingData\Roofs\DuopitchRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.Roofs.FlatRoof" Collapsed="true">
+    <Position X="6.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAEAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuildingData\Roofs\FlatRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.Roofs.FlatRoofWithParapetes" Collapsed="true">
+    <Position X="6.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuildingData\Roofs\FlatRoofWithParapetes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.Roofs.HippedRoof" Collapsed="true">
+    <Position X="5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAQAAAAAIAEAAAAACAAgAgAAFEAAAAEAEA=</HashCode>
+      <FileName>BuildingData\Roofs\HippedRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Build_IT_WindLoads.BuildingData.MonopitchRoof" Collapsed="true">
+    <Position X="8.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAEAAAAAAAAgAAAAEAAAAAEEAA=</HashCode>
+      <FileName>BuildingData\Roofs\MonopitchRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Build_IT_WindLoads.IWindLoadData" Collapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAABAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IWindLoadData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.WindLoadsCases.Interfaces.IWindLoadCase" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAABAAAAQAAAAAAAAABAABA=</HashCode>
+      <FileName>WindLoadsCases\Interfaces\IWindLoadCase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.Terrains.Interfaces.ITerrain" Collapsed="true">
+    <Position X="6.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAKAAAAEAAAAAAAAgAAAAAQAAAA=</HashCode>
+      <FileName>Terrains\Interfaces\ITerrain.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.BuildingData.Interfaces.IBuildingSite" Collapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAEAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>BuildingData\Interfaces\IBuildingSite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.BuildingData.Interfaces.IDuopitchRoof" Collapsed="true">
+    <Position X="3.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAA=</HashCode>
+      <FileName>BuildingData\Interfaces\IDuopitchRoof.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.BuildingData.Interfaces.IFlatRoofBuilding" Collapsed="true">
+    <Position X="8.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuildingData\Interfaces\IFlatRoof.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.BuildingData.Interfaces.IHippedRoof" Collapsed="true">
+    <Position X="1.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAEA=</HashCode>
+      <FileName>BuildingData\Interfaces\IHippedRoof.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.BuildingData.Interfaces.IMonopitchRoof" Collapsed="true">
+    <Position X="6" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAA=</HashCode>
+      <FileName>BuildingData\Interfaces\IMonopitchRoof.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.BuildingData.Interfaces.IStructure" Collapsed="true">
+    <Position X="4.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEBAAACAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuildingData\Interfaces\IStructure.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_WindLoads.BuildingData.Interfaces.IWall" Collapsed="true">
+    <Position X="1.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuildingData\Interfaces\IWall.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

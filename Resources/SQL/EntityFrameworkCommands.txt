@@ -1,0 +1,3 @@
+Add-Migration <name> -Context ScriptInterpreterDbContext -OutputDir ScriptInterpreter\Migrations
+Update-Database -Context ScriptInterpreterDbContext 
+Remove-Migration -context ScriptInterpreterDbContext 

@@ -1,0 +1,50 @@
+<div>
+
+  <span *ngIf="isAuthenticated | async"  class="content-centered clickable">
+    <mat-icon
+    matTooltip="Profile"
+    class="icon ms-2 selectable-icon"
+    [routerLink]='["/authentication/profile"]'>
+    build
+  </mat-icon>
+    <mat-icon
+      matTooltip="Log out"
+      class="icon ms-2 selectable-icon"
+      [routerLink]='["/authentication/logout"]'
+      [state]='{ local: true }'>
+      logout
+    </mat-icon>
+  </span>
+
+  <span *ngIf="(isAuthenticated | async) !== true"  class="content-centered clickable">
+    <mat-icon
+    matTooltip="Register"
+    class="icon ms-2 selectable-icon"
+    [routerLink]='["/authentication/register"]'>
+    account_circle
+  </mat-icon>
+    <mat-icon
+      matTooltip="Log in"
+      class="icon ms-2 selectable-icon"
+      [routerLink]='["/authentication/login"]'>
+      login
+    </mat-icon>
+  </span>
+</div>
+<!--
+<ul class="navbar-nav" *ngIf="isAuthenticated | async">
+    <li class="nav-item">
+        <a  class="nav-link" [class]="(isDarkThemeSelected ? '' : 'text-dark')" [routerLink]='["/authentication/profile"]' title="Manage">Hello {{ userName | async }}</a>
+    </li>
+    <li class="nav-item">
+        <a  class="nav-link text-dark" [routerLink]='["/authentication/logout"]' [state]='{ local: true }' title="Logout">Logout</a>
+    </li>
+</ul>
+<ul class="navbar-nav" *ngIf="(isAuthenticated | async) !== true">
+  <li class="nav-item">
+        <a class="nav-link text-dark" [routerLink]='["/authentication/register"]'>Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" [routerLink]='["/authentication/login"]'>Login</a>
+    </li>
+</ul> -->

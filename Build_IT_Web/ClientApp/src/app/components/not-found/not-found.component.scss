@@ -1,0 +1,14 @@
+@import "~src/variables.scss";
+
+.blured-border{
+  border-radius: 1em;
+  border-collapse: collapse;
+  border-style: groove;
+  border-color: black;
+  box-shadow: revert;
+  box-shadow:  0 0 0.2em 0.2em $accent;
+}
+
+.large{
+  font-size: 6em;
+}

@@ -1,0 +1,108 @@
+name: $(majorVersion).$(minorVersion).$(buildNumber)
+
+trigger:
+- master
+- develop
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  - group: 'KPK_Calcs variables'
+  - name: 'solution'
+    value: '**/*.sln'
+  - name: 'projects'
+    value: '**/*.csproj'
+  - name: 'unitTestProjects'
+    value: '**/*Tests.csproj;!**/*AcceptanceTests.csproj;!**/*IntegrationTests.csproj'
+  - name: 'mainProject'
+    value: 'Build_IT_Web'
+  - name: 'frontendFolder'
+    value: 'ClientApp'
+  - name: 'buildPlatform'
+    value: 'Any CPU'
+  - name: 'buildConfiguration'
+    value: 'Release'
+  - name: 'semanticVersion'
+    value: ${{variables.majorVersion}}.${{variables.minorVersion}}
+  - name: 'buildNumber'
+    value: $[counter(variables['semanticVersion'], 1)]
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: build
+    projects: $(projects)
+    arguments: '--configuration $(buildConfiguration)' 
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '$(Build.Repository.LocalPath)/$(mainProject)/$(frontendFolder)'
+    verbose: true
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: '$(Build.Repository.LocalPath)/$(mainProject)/$(frontendFolder)'
+    customCommand: 'run build --prod'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '$(testProjects)'
+    arguments: '--configuration $(buildConfiguration)'
+
+# - task: DotNetCoreCLI@2
+#   inputs:
+#     command: 'publish'
+#     publishWebProjects: true
+#     arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
+#     zipAfterPublish: True
+
+# - task: PublishBuildArtifacts@1
+#   displayName: 'Publish Artifact'
+#   inputs:
+#     PathtoPublish: '$(build.artifactstagingdirectory)'
+#   condition: succeededOrFailed()
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.Repository.LocalPath)/$(mainProject)/bin/Release/net6.0'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.Repository.LocalPath)/$(mainProject)/$(frontendFolder)/dist'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/wwwroot'
+
+# - task: ArchiveFiles@2
+#   inputs:
+#     rootFolderOrFile: '$(Build.Repository.LocalPath)/$(mainProject)/bin/Release/net6.0'
+#     includeRootFolder: true
+#     archiveType: 'zip'
+#     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)_backend.zip'
+#     replaceExistingArchive: true
+
+# - task: ArchiveFiles@2
+#   inputs:
+#     rootFolderOrFile: '$(Build.Repository.LocalPath)/$(mainProject)/$(frontendFolder)'
+#     includeRootFolder: true
+#     archiveType: 'zip'
+#     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)_frontend.zip'
+#     replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'

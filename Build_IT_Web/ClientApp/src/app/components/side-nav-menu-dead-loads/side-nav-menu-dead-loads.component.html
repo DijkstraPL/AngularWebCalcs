@@ -1,0 +1,12 @@
+<h4 class="content-centered">Dead loads</h4>
+
+<mat-card *ngFor="let deadLoad of deadLoads$ | async" class="clickable"
+  [class.selected]="deadLoad.id == selectedDeadLoadId" (click)="deadLoadClicked(deadLoad.id)">
+  {{deadLoad.name}}
+</mat-card>
+
+<div class="content-centered fixed-bottom bottom-aligned   padding-vertical-4">
+  <button mat-stroked-button color="accent" class="ml-0" (click)="addNewDeadLoad()">
+    <mat-icon class="clickable hover">add</mat-icon> New
+  </button>
+</div>

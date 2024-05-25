@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Build_IT_SnowLoads.SnowLoad" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAKAAAAAgSAAAAAAQALAAAAACBBCAAAAAASAAAAEYQ=</HashCode>
+      <FileName>SnowLoad.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.21" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Building" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFAAAAAAAAAAgBAAAAAAAAAAAAAACAAAAAAQAACAEAA=</HashCode>
+      <FileName>Buillding.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingSite" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAQAAAABAAAA=</HashCode>
+      <FileName>BuildingSite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.API.ConditionChecker" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\ConditionChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_SnowLoads.API.ShapeCoefficientCalc" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\ShapeCoefficientCalc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_SnowLoads.API.SnowLoadCalc" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>API\SnowLoadCalc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_SnowLoads.API.UnitConversion" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\UnitConversion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingTypes.CylindricalRoof" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAgBAAAAAAAAAADAEASAAAAAAABgAIBAAEAAQA=</HashCode>
+      <FileName>BuildingTypes\CylindricalRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingTypes.DriftingAtProjectionsObstructions" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAgAAAAAAAAAQICAEEQAAAAAAABAAIBAAEAAQA=</HashCode>
+      <FileName>BuildingTypes\DriftingAtProjectionsObstructions.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingTypes.MonopitchRoof" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAgAAAAAAAAAAAAQEASAAAAAAABAAIAAAEAAUA=</HashCode>
+      <FileName>BuildingTypes\MonopitchRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingTypes.MultiSpanRoof" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAgAAAIAAAAAABAAEACAAAAAIABAAIAAAEAAQA=</HashCode>
+      <FileName>BuildingTypes\MultiSpanRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingTypes.PitchedRoof" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAIAIAAAABBAAAAAAAABIAAAAAAAAAAAQA=</HashCode>
+      <FileName>BuildingTypes\PitchedRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingTypes.RoofAbuttingToTallerConstruction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACAARAgAYAAgQAARQACAEASQAAAAIABAAABAQEAAQI=</HashCode>
+      <FileName>BuildingTypes\RoofAbuttingToTallerConstruction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingTypes.Snowguards" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAUA=</HashCode>
+      <FileName>BuildingTypes\Snowguards.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.BuildingTypes.SnowOverhanging" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAgAAAACAAAFAQAAAAAAAAAAAAAAAAAQg=</HashCode>
+      <FileName>BuildingTypes\SnowOverhanging.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Exceptional.ExceptionalMultiSpanRoof" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABChAQAAgAEAAAEAAAACAAACAAAAAAAAAAUAAQA=</HashCode>
+      <FileName>Exceptional\ExceptionalMultiSpanRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Exceptional.ExceptionalObstructionOnFlatRoof" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAABCBAAAAAAAAAAAAAAAEAQAChUAAAABBAwUAAQA=</HashCode>
+      <FileName>Exceptional\ExceptionalObstructionOnFlatRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Exceptional.ExceptionalObstructionOnPitchedOrCurvedRoof" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAABCBAAAAAAAAAAAAAAAAAQAChUAAAABBAgUAAQA=</HashCode>
+      <FileName>Exceptional\ExceptionalObstructionOnPitchedOrCurvedRoof.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Exceptional.ExceptionalOverDoorOrLoadingBay" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABKhAAACgIAAAAACAEACAAAAAAAAAAABAAEAAQA=</HashCode>
+      <FileName>Exceptional\ExceptionalOverDoorOrLoadingBay.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Exceptional.ExceptionalRoofAbuttingToTallerConstruction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAABCQCAAAAAAAAIACAGAAAEgAAAAAAEIBAAEAASA=</HashCode>
+      <FileName>Exceptional\ExceptionalRoofAbuttingToTallerConstruction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Exceptional.ExceptionalSnowBehindParapet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABChAAAAgAAAAAACAEACAAAAAAAAAAABAAEAAQA=</HashCode>
+      <FileName>Exceptional\ExceptionalSnowBehindParapet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Exceptional.ExceptionalSnowBehindParapetAtEaves" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBChAAAAgIAAAAACAEACAAAAAAAAAAABAAEAAQA=</HashCode>
+      <FileName>Exceptional\ExceptionalSnowBehindParapetAtEaves.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Build_IT_SnowLoads.Exceptional.ExceptionalSnowInValleyBehindParapet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABChAAAAgAAAAAACAEACAAAAAAAAAAABAAEAAQA=</HashCode>
+      <FileName>Exceptional\ExceptionalSnowInValleyBehindParapet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.IBuilding" Collapsed="true">
+    <Position X="2.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFAAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAAAACAEAA=</HashCode>
+      <FileName>Interfaces\IBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.IBuildingSite" Collapsed="true">
+    <Position X="4.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAQAAAABAAAA=</HashCode>
+      <FileName>Interfaces\IBuildingSite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.ICalculatable" Collapsed="true">
+    <Position X="2.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Interfaces\ICalculatable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.IExceptionalSituationProvider" Collapsed="true">
+    <Position X="4.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IExceptionalSituationProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.ILengthProvider" Collapsed="true">
+    <Position X="7.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Interfaces\ILengthProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.IMonopitchRoof" Collapsed="true">
+    <Position X="2.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAASAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Interfaces\IMonopitchRoof.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.IReturnPeriodProvider" Collapsed="true">
+    <Position X="11.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAAAAAgAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IReturnPeriodProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.ISnowDensityProvider" Collapsed="true">
+    <Position X="6" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Interfaces\ISnowDensityProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.ISnowLoad" Collapsed="true">
+    <Position X="6" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAKAAAAAgQAAAAAAQAAAAAAACBACAAAAAAQAAAAAQA=</HashCode>
+      <FileName>Interfaces\ISnowLoad.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Build_IT_SnowLoads.Interfaces.ITemperatureProvider" Collapsed="true">
+    <Position X="9.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Interfaces\ITemperatureProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

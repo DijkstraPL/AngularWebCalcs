@@ -1,0 +1,21 @@
+<nav [ngSwitch]="selectedSideMenu" class="min-width-60">
+  <div *ngSwitchCase="'companies'">
+    <app-side-nav-menu-companies></app-side-nav-menu-companies>
+  </div>
+  <div *ngSwitchCase="'projects'">
+<app-side-nav-menu-projects></app-side-nav-menu-projects>
+  </div>
+
+
+  <div *ngSwitchCase="'dead-loads'">
+<app-side-nav-menu-dead-loads></app-side-nav-menu-dead-loads>
+  </div>
+
+  <div *ngSwitchCase="'snow-loads'">
+<app-side-nav-menu-snow-loads></app-side-nav-menu-snow-loads>
+  </div>
+
+  <div *ngSwitchDefault>
+    <h4  class="content-centered">Default</h4>
+  </div>
+</nav>

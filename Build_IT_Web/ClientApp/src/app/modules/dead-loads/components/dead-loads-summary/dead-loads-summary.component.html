@@ -1,0 +1,179 @@
+
+<form *ngIf="layeredMaterialsSummary && layeredMaterialsSummary.layeredMaterials && layeredMaterialsSummary.layeredMaterials.length > 0">
+  <table mat-table [dataSource]="layeredMaterialsSummary.layeredMaterials"
+   class="mat-elevation-z8" multiTemplateDataRows>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <div>
+          <div>
+            <button mat-icon-button aria-label="Move up" (click)="move(element, -1)">
+            <mat-icon>keyboard_arrow_up</mat-icon>
+          </button>
+        </div>
+        <div>
+        <button mat-icon-button aria-label="Move down" (click)="move(element, 1)">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+          </div>
+      </div>
+     </td>
+     <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element">
+        <!--<h5>{{element.subcategory.category.name}}</h5>
+        <h6>{{element.subcategory.name}}</h6>-->
+        {{element.name}}
+      </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <!-- Minimum Density Column -->
+    <ng-container matColumnDef="minimumDensity">
+      <th mat-header-cell *matHeaderCellDef> Minimum density </th>
+      <td mat-cell *matCellDef="let element"> {{element.minimumDensity}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <!-- Maximum Density Column -->
+    <ng-container matColumnDef="maximumDensity">
+      <th mat-header-cell *matHeaderCellDef> Maximum density </th>
+      <td mat-cell *matCellDef="let element"> {{element.maximumDensity}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <!-- Width Column -->
+    <ng-container matColumnDef="width">
+      <th mat-header-cell *matHeaderCellDef> Width </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-form-field class="input-form-field" appearance="standard">
+          <mat-label>Width</mat-label>
+          <input matInput type="text" [(ngModel)]="element.width" [name]="'width'+element.index" autocomplete="off">
+          <div matSuffix>
+            <span>m</span>
+            <button *ngIf="element.width"  mat-icon-button aria-label="Clear" (click)="element.width=undefined">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+          <!--<mat-error *ngIf="widthFormControl.hasError('isNumber')">
+            Please enter a valid width
+          </mat-error>-->
+        </mat-form-field>
+      </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <!-- Length Column -->
+    <ng-container matColumnDef="length">
+      <th mat-header-cell *matHeaderCellDef> Length </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-form-field class="input-form-field" appearance="standard">
+          <mat-label>Length</mat-label>
+          <input matInput type="text" [(ngModel)]="element.length" [name]="'length'+element.index" autocomplete="off">
+          <div matSuffix>
+            <span>m</span>
+            <button *ngIf="element.length"  mat-icon-button aria-label="Clear" (click)="element.length=undefined">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+
+          <!--<mat-error *ngIf="lengthFormControl.hasError('isNumber')">
+            Please enter a valid length
+          </mat-error>-->
+        </mat-form-field>
+      </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <!-- Height Column -->
+    <ng-container matColumnDef="height">
+      <th mat-header-cell *matHeaderCellDef> Height </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-form-field class="input-form-field" appearance="standard">
+          <mat-label>Height</mat-label>
+          <input matInput type="text" [(ngModel)]="element.height" [name]="'height'+element.index" autocomplete="off">
+          <div matSuffix>
+            <span>m</span>
+            <button *ngIf="element.height"  mat-icon-button aria-label="Clear" (click)="element.height=undefined">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+          <!--<mat-error *ngIf="heightFormControl.hasError('isNumber')">
+            Please enter a valid height
+          </mat-error>-->
+        </mat-form-field>
+      </td>
+      <td mat-footer-cell *matFooterCellDef class="summary">Sum:</td>
+    </ng-container>
+
+    <!-- Minimum Load Column -->
+    <ng-container matColumnDef="minimumLoad">
+      <th mat-header-cell *matHeaderCellDef> Minimum load </th>
+      <td mat-cell *matCellDef="let element"> {{element.getMinimumLoad()}} </td>
+      <td mat-footer-cell *matFooterCellDef class="summary"> {{layeredMaterialsSummary.minimumLoad()}}</td>
+    </ng-container>
+
+    <!-- Maximum Load Column -->
+    <ng-container matColumnDef="maximumLoad">
+      <th mat-header-cell *matHeaderCellDef> Maximum load </th>
+      <td mat-cell *matCellDef="let element"> {{element.getMaximumLoad()}} </td>
+      <td mat-footer-cell *matFooterCellDef class="summary">{{layeredMaterialsSummary.maximumLoad()}}</td>
+    </ng-container>
+
+
+    <!-- Unit Column -->
+    <ng-container matColumnDef="unit">
+      <th mat-header-cell *matHeaderCellDef> Unit </th>
+      <td mat-cell *matCellDef="let element"> <span [innerHTML]="changeUnit(element.getLoadUnit())"></span> </td>
+      <td mat-footer-cell *matFooterCellDef>  <span class="summary" [innerHTML]="changeUnit(layeredMaterialsSummary.unit())"></span> </td>
+    </ng-container>
+
+    <!-- Document Name Column -->
+    <ng-container matColumnDef="documentName" >
+      <th mat-header-cell *matHeaderCellDef> Document name </th>
+      <td mat-cell *matCellDef="let element"> {{element.documentName}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <!-- Remove Column -->
+    <ng-container matColumnDef="remove" >
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+      <button mat-fab color="primary" (click)="remove(element)">
+        <mat-icon>remove</mat-icon>
+      </button>
+      </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <!-- Additions Row -->
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let element" [attr.colspan]="_columnsToDisplay.length">
+        <div class="additions"
+             [@detailExpand]="'expanded'"
+      *ngIf="element.additions && element.additions.length>0">
+      <mat-selection-list #additions>
+        <mat-list-item *ngFor="let addition of element.additions">
+          <mat-checkbox [name]="addition.name"  [(ngModel)]="addition.isSelected">{{addition.name}}</mat-checkbox>
+        </mat-list-item>
+      </mat-selection-list>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="_columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let element; columns: _columnsToDisplay;"
+      class="additions-row"></tr>
+    <tr  mat-row *matRowDef="let row; columns: ['expandedDetail']" class="additions-row"></tr>
+    <tr  mat-footer-row *matFooterRowDef="_columnsToDisplay"  [class]="layeredMaterialsSummary.isValid()?'visible':'collapsed'"></tr>
+  </table>
+</form>
+
+
+<button mat-button color="accent" (click)="saveDeadLoadLayers()" class="mt-2">Save</button>

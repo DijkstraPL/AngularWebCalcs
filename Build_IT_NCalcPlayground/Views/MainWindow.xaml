@@ -1,0 +1,117 @@
+﻿<Window x:Class="Build_IT_NCalcPlayground.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:Build_IT_NCalcPlayground.Views"
+        xmlns:ivm="clr-namespace:Build_IT_NCalcPlayground.ViewModels.Interfaces"
+        xmlns:vm="clr-namespace:Build_IT_NCalcPlayground.ViewModels"
+        xmlns:mark="clr-namespace:Build_IT_NCalcPlayground.WpfExtensions.MarkupExtensions"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{mark:ServiceProvider DataType={x:Type ivm:IMainWindowViewModel} }"
+        d:DataContext="{d:DesignInstance {x:Type vm:MainWindowViewModel}, IsDesignTimeCreatable=True}">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="valueTypes" 
+                            MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="vm:ValueType"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0">
+            <ListBox ItemsSource="{Binding InputParameterViewModels}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate DataType="{x:Type vm:InputParameterViewModel}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MinWidth="50"/>
+                                <ColumnDefinition MinWidth="100"/>
+                                <ColumnDefinition MinWidth="50"/>
+                                <ColumnDefinition MinWidth="50"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                                       Grid.Column="0"/>
+                            <TextBox Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}"
+                                       Grid.Column="1"/>
+                            <TextBox Text="{Binding Unit, UpdateSourceTrigger=PropertyChanged}"
+                                       Grid.Column="2"
+                                     Visibility="{Binding HasUnit, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                            <ComboBox Text="{Binding ValueType}"
+                                      SelectedItem="{Binding ValueType}"
+                                       Grid.Column="3"
+                                      ItemsSource="{Binding Source={StaticResource valueTypes}}"/>
+                            <Button Content="-" 
+                                Grid.Column="4"
+                                    Width="20"
+                            Command="{Binding RemoveInputParameterCommand}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+        <Border Grid.Column="1">
+            <TextBox Text="{Binding Remarks, UpdateSourceTrigger=PropertyChanged}"/>
+        </Border>
+        <Border Grid.Row="1"
+                Grid.ColumnSpan="2">
+            <Button Content="+"
+                Command="{Binding AddInputParameterCommand}"/>
+        </Border>
+        <Border Grid.Row="2" 
+                Grid.ColumnSpan="2">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBox Text="{Binding Equation, UpdateSourceTrigger=PropertyChanged}" 
+                     FontSize="16" 
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Center"/>
+
+                <TextBlock Text="{Binding CalculationTime}"
+                           VerticalAlignment="Bottom"
+                           HorizontalAlignment="Right" 
+                           Margin="5"/>
+
+                <StackPanel HorizontalAlignment="Left"
+                        Grid.Row="1" 
+                    Width="100">
+                <Button Content="Copy Test Data"
+                        Height="25"
+                        Width="100"
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top"
+                        Command="{Binding CopyTestDataCommand}"/>
+                    <Separator Margin="5"/>
+                    <Button Content="Add Test Data"
+                        Height="25"
+                        Width="100"
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top"
+                        Command="{Binding AddTestDataCommand}"/>
+                </StackPanel>
+
+                <TextBlock Text="{Binding Result}"
+                           Grid.Row="1"
+                           FontSize="30"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

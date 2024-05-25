@@ -1,0 +1,4 @@
+https://code-maze.com/angular-authentication-aspnet-identity/
+
+Icons:
+https://fonts.google.com/icons

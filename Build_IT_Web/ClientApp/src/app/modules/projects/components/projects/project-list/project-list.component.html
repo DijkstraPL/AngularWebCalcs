@@ -1,0 +1,51 @@
+
+
+<mat-divider></mat-divider>
+
+<div class="row">
+
+  <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-4"
+  *ngFor="let project of topProjectViewModels; index as i"
+  id="project-card{{i}}">
+<mat-card class="example-card "  >
+  <mat-card-title>{{project.name}}</mat-card-title>
+  <mat-card-subtitle>{{project.lastModified | date:'short':'+0100':'pl'}}</mat-card-subtitle>
+  <mat-card-content>
+    <p>{{project.description}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="openDetailsFor(project.id)">Details</button>
+    <button mat-button (click)="onEditClicked(project)">Edit</button>
+    <button class="float-end" mat-button color="warn" (click)="onRemoveClicked(project, $event)">Remove</button>
+  </mat-card-actions>
+</mat-card>
+
+</div>
+
+</div>
+<div class="row">
+
+
+<mat-selection-list [multiple]="false">
+  <mat-list-option *ngFor="let project of projectViewModelsOrdered" (selectedChange)="openDetailsFor(project.id)"
+  [matMenuTriggerFor]="projectMenu" appRightMouseMenu [matMenuTriggerData]="project"
+  [menu]="projectMenu"
+  [menuData]="project">
+    <div>
+      <div class='float-start'><span class='fw-bold'>{{project.name}}</span><span class="small"> - {{project.description}}</span></div>
+      <div class='float-end small'>{{project.lastModified | date:'short':'+0100':'pl'}}</div>
+    </div>
+  </mat-list-option>
+</mat-selection-list>
+</div>
+
+<mat-menu #projectMenu="matMenu">
+  <button mat-menu-item (click)="onEditProject(projectMenu)">
+    <mat-icon>edit</mat-icon>
+    <span>Edit</span>
+  </button>
+  <button mat-menu-item (click)="onRemoveProject(projectMenu)">
+    <mat-icon>remove</mat-icon>
+    <span>Remove</span>
+  </button>
+</mat-menu>

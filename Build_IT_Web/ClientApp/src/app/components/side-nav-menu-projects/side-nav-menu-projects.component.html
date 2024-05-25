@@ -1,0 +1,26 @@
+<h4 class="content-centered">Projects</h4>
+
+    <mat-card *ngFor="let project of projects$ | async"
+    class="clickable" [class.selected]="project.id == selectedProjectId"
+    (click)="projectClicked(project.id)"
+    [matMenuTriggerFor]="projectMenu" appRightMouseMenu [matMenuTriggerData]="project"
+    [menu]="projectMenu"
+    [menuData]="project">{{project.name}}
+    </mat-card>
+
+    <div class="content-centered fixed-bottom bottom-aligned   padding-vertical-4">
+      <button mat-stroked-button color="accent" class="ml-0" (click)="addNewProject()" >
+        <mat-icon class="clickable hover">add</mat-icon> New
+      </button>
+    </div>
+
+    <mat-menu #projectMenu="matMenu">
+      <button mat-menu-item (click)="onEditProject(projectMenu)">
+        <mat-icon>edit</mat-icon>
+        <span>Edit</span>
+      </button>
+      <button mat-menu-item (click)="onRemoveProject(projectMenu)">
+        <mat-icon>remove</mat-icon>
+        <span>Remove</span>
+      </button>
+    </mat-menu>

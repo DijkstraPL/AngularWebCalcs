@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Remove company </h1>
+<div mat-dialog-content>
+  <p>Put the name of the company to remove</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Company name</mat-label>
+    <input matInput [(ngModel)]="companyName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No</button>
+  <button mat-button [disabled]="companyName !== data.companyName" [mat-dialog-close]="companyName" cdkFocusInitial>Confirm</button>
+</div>

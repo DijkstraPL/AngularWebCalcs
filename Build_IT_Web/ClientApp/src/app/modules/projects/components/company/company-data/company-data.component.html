@@ -1,0 +1,32 @@
+
+    <h2>Company {{(Company$ | async)?.name}}</h2>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <app-company-header class='w-100'></app-company-header>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-project-list></app-project-list>
+    </mat-expansion-panel>
+
+<mat-divider></mat-divider>
+
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h3 class="m-0">Users</h3>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-divider></mat-divider>
+
+  <form [formGroup]="userForm" class="user-form"  (ngSubmit)="onSubmitUserForm()">
+    <mat-form-field class="control-form">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email"/>
+    </mat-form-field>
+
+    <button  mat-raised-button color="accent" type="submit" [disabled]="!userForm.valid">Assign</button>
+  </form>
+<app-user-list></app-user-list>
+</mat-expansion-panel>
